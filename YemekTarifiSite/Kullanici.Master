@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kullanici.Master.cs" Inherits="YemekTarifiSite.Kullanici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<!-- CSS only -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            width: 1003px;
+            height: 46px;
+        }
+        .auto-style4 {
+            background-color: #FFFFFF;
+            height: 49px;
+            width: 1000px;
+            margin-left: 300px;
+
+        }
+        .auto-style5 {
+            background-color: #CCCCFF;
+            height: 667px;
+            width: 997px;
+        }
+        .auto-style6 {
+            width: 752px;
+            height: 733px;
+        }
+        .auto-style7 {
+            width: 199px;
+            height: 735px;
+            float: left;
+        }
+        .auto-style8 {
+            height: 49px;
+            color: #CCCCFF;
+            text-align: center;
+        }
+        .auto-style9 {
+            height:194px;
+            width:1000px;
+            text-align: center;
+        }
+        .auto-style10 {
+            color: #FFFFFF;
+        }
+        .auto-style11 {
+            font-size: .875em;
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+        .auto-style15 {
+            height: 49px;
+            text-align: center;
+        }
+        .auto-style18 {
+            text-decoration: none;
+        }
+        .auto-style19 {
+            text-align: center;
+        }
+        .auto-style20 {
+            text-align: left;
+            width: 199px;
+        }
+        .auto-style22 {
+            color: #000066;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin-left:300px; background-color: #CCCCFF;" class="auto-style9">
+        <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="~/img/head1.jpg" Width="1000px" />
+        </div>
+    <div style="width:1000px;margin-left:300px;height:20px"></div>
+     <div class="auto-style4">
+         <table class="auto-style1 table table-sm">
+             <tr>
+                 <td class="auto-style15">
+                     <h1><a href="Anasayfa.aspx" class="auto-style18">ANASAYFA</a></h1>
+                 </td>
+                 <td class="auto-style8">
+                     <h1><a href="GununYemegi.aspx" class="auto-style18">GÜNÜN YEMEĞİ</a></h1>
+                 </td>
+                 <td class="auto-style15">
+                     <h1><a href="TarifOner.aspx" class="auto-style18">TARİF ÖNER</a></h1>
+                 </td>
+                 <td class="auto-style15">
+                     <h1><a href="Hakkimizda.aspx" class="auto-style18">HAKKIMIZDA</a></h1>
+                 </td>
+                 <td class="auto-style15">
+                     <h1><a href="Iletisim.aspx" class="auto-style18">İLETİŞİM</a></h1>
+                 </td>
+             </tr>
+         </table>
+    </div>
+    <div style="margin-left:300px;" class="auto-style3">
+        <br />
+        </div>
+
+       <div style="margin-left:300px;height:700px; width:1000px;background-color: white" class="auto-style5 ">
+
+            <div class="auto-style7">
+                <div class="auto-style20">
+                <br />
+                <strong>&nbsp;</strong><span class="auto-style22"><strong> KATEGORİLER</strong></span><span class="auto-style10">İL<br />
+                ER</span><br />
+                </div>
+                <div class="auto-style19">
+                <asp:DataList ID="DataList1" runat="server" Height="674px" Width="205px" CellPadding="4" CssClass="auto-style11" ForeColor="#333333" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+                    <AlternatingItemStyle BackColor="White" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <ItemStyle BackColor="#EFF3FB" />
+                    <ItemTemplate>
+
+                        <a href="KategoriDetay.aspx?KategoriId=<%#Eval("KategoriId") %>"><asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>' CssClass="text-decoration-none"></asp:Label></a>
+
+                        &nbsp;
+                    </ItemTemplate>
+                    
+                    <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SeparatorStyle BorderColor="White" BorderStyle="Solid" />
+                    
+                </asp:DataList>
+                </div>
+            </div>
+            <div style="margin-left:250px;  background-color: white;" class="auto-style6">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+       </div>
+
+    </form>
+
+    </body>
+</html>

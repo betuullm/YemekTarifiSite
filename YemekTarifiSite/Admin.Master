@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="YemekTarifiSite.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<!-- CSS only -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style3 {
+            width: 1000px;
+            height: 20px;
+        }
+        .auto-style5 {
+            background-color: #CCCCFF;
+            height: 667px;
+            width: 997px;
+        }
+        .auto-style6 {
+            width: 752px;
+            height: 733px;
+        }
+        .auto-style7 {
+            width: 199px;
+            height: 735px;
+            float: left;
+        }
+        .auto-style9 {
+            height:194px;
+            width:1000px;
+            text-align: center;
+        }
+        .auto-style10 {
+            width: 100%;
+            height: 218px;
+            background-color: #FFFFFF;
+        }
+        .auto-style16 {
+            height: 128px;
+            text-align: center;
+        }
+        .auto-style17 {
+            width: 1000px;
+            height: 141px;
+        }
+        .auto-style21 {
+            height: 127px;
+            text-align: center;
+        }
+        .auto-style22 {
+            height: 127px;
+            color: #000000;
+            text-align: center;
+            background-color: #FFCCCC;
+        }
+        .auto-style23 {
+            height: 127px;
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #FFCCCC;
+            font-size: large;
+        }
+        .auto-style24 {
+            height: 128px;
+            text-align: center;
+            color: #000000;
+            background-color: #FFCCCC;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin-left:300px; background-color: #CCCCFF;" class="auto-style9">
+        <asp:Image ID="Image1" runat="server" Height="332px" ImageUrl="~/img/blog.jpg" Width="1000px" />
+        </div>
+    <div style="margin-left:300px;" class="auto-style17">
+        <br />
+        </div>
+    <div style="margin-left:300px;" class="auto-style3">
+        <br />
+        <br />
+        <br />
+        </div>
+
+       <div style="margin-left:300px;height:700px; width:1000px;background-color: white" class="auto-style5 ">
+
+            <div class="auto-style7">
+                <table align="center" border="0" class="auto-style10">
+                    <tr>
+                        <td class="auto-style23"><a href="AdminKategoriler.aspx" class="text-decoration-none">KATEGORİLER</a></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style21"><a href="AdminYemekler.aspx" class="text-decoration-none">YEMEKLER</a></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style22"><a href="AdminYorumlar.aspx" class="text-decoration-none">YORUMLAR</a></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style21"><a href="AdminMesajlar.aspx" class="text-decoration-none">MESAJLAR</a></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style24"><a href="AdminYemekler.aspx" class="text-decoration-none">GÜNÜN YEMEĞİ</a></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style16"><a href="AdminTarifler.aspx" class="text-decoration-none">TARİFLER</a></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style24"><a href="HakkimizdaAdmin.aspx" class="text-decoration-none">HAKKIMIZDA</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-left:250px;  background-color: white;" class="auto-style6">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+       </div>
+
+    </form>
+
+    </body>
+</html>
